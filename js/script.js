@@ -153,7 +153,7 @@ function checkAce (card) {
     }
     return 0
 }
-
+ 
 // reduces the aces from 11 to 1
 function reduceAce (playerSum, playerAceCount) {
     while (playerSum > 21 && playerAceCount > 0) {
