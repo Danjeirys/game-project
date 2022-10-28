@@ -1,0 +1,50 @@
+body {
+    text-align: center;
+    background-image: url('https://media.istockphoto.com/vectors/black-jack-table-background-in-green-color-green-cloth-gambling-field-vector-id1308301349?k=20&m=1308301349&s=170667a&w=0&h=2pUMPXRZdQItUz34eTthqJJEm39wMaa9Tb6QvmyOip8=');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#dealer-cards img {
+    height: 245px;
+    width: 155px;
+    margin: 1px;
+}
+
+#user-cards img {
+    height: 175px;
+    width: 125px;
+    margin: 1px;
+}
+
+#hit {
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+}
+
+#stay {
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+}
+
+#restart {
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+}
+
+#start {
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+}
+
+h2 {
+    color: white;
+}
+
+.hide {
+    display: none;
+}
