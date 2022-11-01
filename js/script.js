@@ -1,5 +1,8 @@
 let dealerSum = 0
 let yourSum = 0
+let lifeSpan = 150 
+
+document.getElementById ('soul-counter') = lifeSpan
 
 let dealerAceCount = 0
 let yourAceCount = 0 // keeps track of how many aces you have to add 10 or add 1 to keep you from busting
@@ -72,7 +75,7 @@ function startGame () {
     console.log (yourSum)
     document.getElementById ('hit').addEventListener ('click', hit) // calls on the 'hit' function giving the user a new card
     document.getElementById ('stay').addEventListener ('click', stay) // calls on the stay function letting the user end their turn with current total sum
-    // document.getElementById ('reset').addEventListener ('click') = startGame
+    document.getElementById ('reset').addEventListener ('click', resetGame)
 }
 
 // giving the 'hit' button functionality
@@ -131,6 +134,10 @@ function stay () {
     document.getElementById ('results').innerText = message // puts one of the messages into the ID results <p> tag
 }
 
+function resetGame () {
+    
+}
+
 function getValue (card) {
     let data = card.split ('-') // by calling split we calling the values ['4', 'C']
     let value = data [0]
@@ -161,6 +168,11 @@ function reduceAce (playerSum, playerAceCount) {
         playerAceCount -= 0
     }
     return playerSum
+}
+
+function betLife () {
+    
+
 }
 
 // function startButton () {

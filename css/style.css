@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    background-image: url('https://media.istockphoto.com/vectors/black-jack-table-background-in-green-color-green-cloth-gambling-field-vector-id1308301349?k=20&m=1308301349&s=170667a&w=0&h=2pUMPXRZdQItUz34eTthqJJEm39wMaa9Tb6QvmyOip8=');
+    background-image: url('https://pbs.twimg.com/media/ECEL1lPUwAAdU3t.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -17,16 +17,57 @@ body {
     margin: 1px;
 }
 
+#bigMom {
+    height: 200px;
+    width: 300px;
+    justify-content: center;
+
+    /* margin-right: 100%; */
+    /* margin-left: auto; */
+    /* padding-top: 100px; */
+    /* margin-top: 20%; */
+}
+
+/* #playicon { */
+    /* display: inline-block; */
+    /* justify-content: space-around; */
+/* } */
+
+#luffy {
+    /* padding: 50px; */
+    height: 200px;
+    width: 300px;
+    /* margin-left: 40px; */
+    /* margin-bottom: 20%; */
+    justify-content: center; 
+    /* margin-right: 100%; */
+    /* margin-left: auto; */
+    /* padding-bottom: 150px; */
+}
+
+/* #soulking { */
+    /* margin-right: 60%; */
+    /* position: right; */
+    /* display: flex; */
+    /* margin: 1px; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+/* } */
+
 #hit {
     width: 100px;
     height: 50px;
     font-size: 20px;
+    /* display: flex; */
+    /* justify-content: center; */
 }
 
 #stay {
     width: 100px;
     height: 50px;
     font-size: 20px;
+    /* display: flex; */
+    /* justify-content: center; */
 }
 
 #restart {
@@ -47,4 +88,21 @@ h2 {
 
 .hide {
     display: none;
+}
+
+#user-bet {
+    display: flex;
+}
+
+#soul-counter {
+    display: flex;
+}
+
+#bet {
+    margin-right:100%;
+    /* text-align: left; */
+}
+
+h4 {
+    text-align: left;
 }
