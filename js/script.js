@@ -1,8 +1,10 @@
 let dealerSum = 0
 let yourSum = 0
-let lifeSpan = 150 
+let lifeSpan = 150
+let yearsLeft = ''
 
-document.getElementById ('soul-counter') = lifeSpan
+
+// document.getElementById ('soul-counter') = lifeSpan
 
 let dealerAceCount = 0
 let yourAceCount = 0 // keeps track of how many aces you have to add 10 or add 1 to keep you from busting
@@ -16,6 +18,7 @@ window.onload = function () {
     buildDeck ()
     shuffleDeck ()
     startGame ()
+    betLife()
 }
 
 function buildDeck () {
@@ -69,13 +72,14 @@ function startGame () {
         cardImg.src = './cards/' + card + '.png' 
         yourSum += getValue (card) 
         yourAceCount += checkAce (card) 
-        document.getElementById ('user-cards').append (cardImg) 
+        document.getElementById('user-cards').append(cardImg) 
     }
     //print our user sum
     console.log (yourSum)
     document.getElementById ('hit').addEventListener ('click', hit) // calls on the 'hit' function giving the user a new card
     document.getElementById ('stay').addEventListener ('click', stay) // calls on the stay function letting the user end their turn with current total sum
-    document.getElementById ('reset').addEventListener ('click', resetGame)
+    // document.getElementById ('reset').addEventListener ('click', resetGame)
+    document.getElementById ('life').addEventListener ('click', betLife)
 }
 
 // giving the 'hit' button functionality
@@ -104,6 +108,18 @@ function hit () {
     if (reduceAce(yourSum, yourAceCount) > 21) {
         canHit = false
     }
+
+    // let life = ''
+    // if (lifeSpan === 150) {
+    //     life = 'You Have a Lifespan of 150 years'
+    // } else if (lifeSpan > 150) {
+    //     life = `You have ${betting} years left`
+    // } else if (lifeSpan == 0) {
+    //     life = 'You Died!'
+    // }
+
+    // document.getElementById ('soul-counter').innerText = life
+    // console.log (life)
 }
 
 function stay () {
@@ -119,19 +135,26 @@ function stay () {
     let message = ''
     if (yourSum > 21) {
         message = 'YOU LOSE!'
+        yearsLeft = lifeSpan -= 10
     } else if (dealerSum > 21) {
         message = 'YOU WIN!'
+        yearsLeft = lifeSpan += 10
     } else if (yourSum == dealerSum) {
         message = 'ITS A TIE!'
     } else if (yourSum > dealerSum) {
         message = 'YOU WIN!'
+        yearsLeft = lifeSpan += 10
     } else if (yourSum < dealerSum) {
         message = 'YOU LOSE!'
+        yearsLeft = lifeSpan -= 10
     }
+
 
     document.getElementById ('dealer-sum').innerText = dealerSum // put dealerSum into the ID dealer-sum <h2> tag
     document.getElementById ('user-sum').innerText = yourSum // put yourSum into the ID your-sum <h2> tag
     document.getElementById ('results').innerText = message // puts one of the messages into the ID results <p> tag
+    document.getElementById ('years').innerText = yearsLeft
+    console.log (yearsLeft)
 }
 
 function resetGame () {
@@ -160,7 +183,7 @@ function checkAce (card) {
     }
     return 0
 }
- 
+
 // reduces the aces from 11 to 1
 function reduceAce (playerSum, playerAceCount) {
     while (playerSum > 21 && playerAceCount > 0) {
@@ -171,8 +194,24 @@ function reduceAce (playerSum, playerAceCount) {
 }
 
 function betLife () {
-    
+    // let yearsLeft = ''
 
+    // for (let i = 0; i < lifeSpan; i++) {
+        // if (yourSum > 21) {
+        //     yearsLeft = lifeSpan - 10
+        // } else if (dealerSum > 21) {
+        //     yearsLeft = lifeSpan + 10
+        // } else if (yourSum === dealerSum) {
+        //     yearsLeft = lifeSpan
+        // }  else if (yourSum > dealerSum) {
+        //     yearsLeft = lifeSpan + 10
+        // } else if (yourSum < dealerSum) {
+        //     yearsLeft = lifeSpan - 10
+        // }
+    // }
+
+    // document.getElementById ('years').innerText = yearsLeft
+    // console.log (yearsLeft)
 }
 
 // function startButton () {
