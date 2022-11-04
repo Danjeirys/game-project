@@ -11,6 +11,6 @@ The game at its core is a standard black jack card playing game. I've added my o
 I'm hoping to use my game to get people interested in giving the show a shot. 
 
 Here's my link: 
-
+https://danjeirys.github.io/game-project/
 
 Hope you enjoy, I will be working on adding a next round button to add more playability along side some more features but I still haven't decided upon on which ones. 
