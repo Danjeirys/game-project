@@ -153,7 +153,7 @@ function stay () {
     document.getElementById ('dealer-sum').innerText = dealerSum // put dealerSum into the ID dealer-sum <h2> tag
     document.getElementById ('user-sum').innerText = yourSum // put yourSum into the ID your-sum <h2> tag
     document.getElementById ('results').innerText = message // puts one of the messages into the ID results <p> tag
-    document.getElementById ('years').innerText = yearsLeft
+    document.getElementById ('years').innerText = yearsLeft // puts the remainder of user lifespan in the ID <h4> tag
     console.log (yearsLeft)
 }
 
